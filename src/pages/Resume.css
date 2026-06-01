@@ -1,0 +1,272 @@
+.resume {
+  padding-top: var(--nav-height);
+}
+
+/* Hero */
+.resume-hero {
+  background: var(--gradient-hero);
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 40px !important;
+}
+
+.resume-hero__bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 75% 50%, rgba(244, 179, 201, 0.35) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.resume-hero__inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+.resume-download-btn { flex-shrink: 0; }
+
+/* Main Grid */
+.resume-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Section Headers */
+.resume-section__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.resume-section__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-50);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.resume-section__icon--edu {
+  background: #f0fdf4;
+  color: #3d8b65;
+}
+
+.resume-section__icon--umkm {
+  background: #fff8f3;
+  font-size: 1.5rem;
+}
+
+.resume-section__title {
+  font-size: 1.2rem;
+  color: var(--color-text-primary);
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: 20px;
+  bottom: 20px;
+  width: 2px;
+  background: var(--color-border);
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 16px;
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.timeline-item:last-child { padding-bottom: 0; }
+
+.timeline-dot {
+  display: flex;
+  justify-content: center;
+  padding-top: 22px;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-dot__inner {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  border: 2px solid white;
+  box-shadow: 0 0 0 3px var(--color-primary-100);
+}
+
+.timeline-dot__inner--edu {
+  background: #3d8b65;
+  box-shadow: 0 0 0 3px #d1fae5;
+}
+
+/* Timeline Card */
+.timeline-card {
+  padding: 20px 22px;
+}
+
+.timeline-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.timeline-card__position {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 3px;
+}
+
+.timeline-card__company {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.timeline-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.timeline-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.timeline-card__desc {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.timeline-card__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Skills in Resume */
+.resume-skills {
+  margin-top: 36px;
+  padding: 24px;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.resume-skill-group { margin-top: 18px; }
+.resume-skill-group:first-child { margin-top: 0; }
+
+.resume-skill-category {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+  font-family: var(--font-sans);
+}
+
+.resume-skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* UMKM Section */
+.resume-umkm {
+  margin-top: 56px;
+  padding: 36px;
+  background: var(--gradient-soft);
+  border: 1px solid var(--color-primary-100);
+  border-radius: var(--radius-xl);
+}
+
+.resume-umkm__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.resume-umkm-card {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  transition: all var(--transition-base);
+}
+
+.resume-umkm-card:hover {
+  border-color: var(--color-primary-200);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.resume-umkm-card__emoji {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.resume-umkm-card__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.resume-umkm-card__name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.resume-umkm-card__desc {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .resume-grid { grid-template-columns: 1fr; }
+  .resume-hero__inner { flex-direction: column; align-items: flex-start; }
+  .resume-umkm__grid { grid-template-columns: 1fr; }
+  .resume-umkm { padding: 24px; }
+}
