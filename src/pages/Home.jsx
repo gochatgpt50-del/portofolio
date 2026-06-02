@@ -261,7 +261,7 @@ export default function Home() {
                 <span className="home-paragon-promo__brand home-paragon-promo__brand--emina">🌻 Emina</span>
               </div>
               <a
-                href="https://paragon.lenysundari.my.id"
+                href="https://paragon.lenysundariarnas.my.id"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-paragon"

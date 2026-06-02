@@ -1,6 +1,16 @@
 {
   "rewrites": [
     {
+      "has": [
+        {
+          "type": "host",
+          "value": "paragon.lenysundariarnas.my.id"
+        }
+      ],
+      "source": "/(.*)",
+      "destination": "/paragon/$1"
+    },
+    {
       "source": "/paragon/(.*)",
       "destination": "/paragon/$1"
     },
@@ -14,3 +24,4 @@
     }
   ]
 }
+
