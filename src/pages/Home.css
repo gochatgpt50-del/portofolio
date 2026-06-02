@@ -424,3 +424,253 @@
   .home-hero__float--2 { display: none; }
   .home-stats__item:nth-child(2n)::after { display: none; }
 }
+
+/* ============================
+   Paragon Weblog Promo Section
+   ============================ */
+.home-paragon-promo {
+  background: linear-gradient(135deg, #1a0a14 0%, #2d1225 40%, #0f2a28 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.home-paragon-promo__inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 72px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.home-paragon-promo__blobs {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.home-paragon-promo__blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.3;
+}
+
+.home-paragon-promo__blob--1 {
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, #e8527a, transparent);
+  top: -100px;
+  right: 0;
+  animation: blobFloat 10s ease-in-out infinite;
+}
+
+.home-paragon-promo__blob--2 {
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, #2da9a0, transparent);
+  bottom: -80px;
+  left: 10%;
+  animation: blobFloat 13s ease-in-out infinite reverse;
+}
+
+.home-paragon-promo__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 16px;
+  background: rgba(232, 82, 122, 0.15);
+  border: 1px solid rgba(232, 82, 122, 0.3);
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f4829f;
+  margin-bottom: 20px;
+  font-family: var(--font-sans);
+}
+
+.home-paragon-promo__title {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 800;
+  color: white;
+  line-height: 1.15;
+  margin-bottom: 18px;
+  letter-spacing: -0.02em;
+  font-family: var(--font-display);
+}
+
+.home-paragon-promo__desc {
+  font-size: 1.02rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.8;
+  margin-bottom: 28px;
+  max-width: 520px;
+}
+
+.home-paragon-promo__brands {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.home-paragon-promo__brand {
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-family: var(--font-sans);
+}
+
+.home-paragon-promo__brand--wardah {
+  background: rgba(232, 82, 122, 0.18);
+  color: #f4829f;
+  border: 1px solid rgba(232, 82, 122, 0.3);
+}
+
+.home-paragon-promo__brand--makeover {
+  background: rgba(45, 169, 160, 0.15);
+  color: #4dc4bc;
+  border: 1px solid rgba(45, 169, 160, 0.25);
+}
+
+.home-paragon-promo__brand--emina {
+  background: rgba(212, 169, 138, 0.15);
+  color: #e8c09a;
+  border: 1px solid rgba(212, 169, 138, 0.25);
+}
+
+/* Button */
+.btn-paragon {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #e8527a 0%, #f4829f 100%);
+  color: white;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  transition: all var(--transition-base);
+  box-shadow: 0 10px 30px rgba(232, 82, 122, 0.4);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-paragon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 48px rgba(232, 82, 122, 0.55);
+}
+
+.btn-paragon:active {
+  transform: translateY(0);
+}
+
+/* Visual card */
+.home-paragon-promo__visual {
+  flex-shrink: 0;
+}
+
+.home-paragon-promo__card {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  padding: 40px 36px;
+  text-align: center;
+  width: 280px;
+  transition: all var(--transition-base);
+}
+
+.home-paragon-promo__card:hover {
+  border-color: rgba(232, 82, 122, 0.35);
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(232, 82, 122, 0.2);
+}
+
+.home-paragon-promo__card-icon {
+  font-size: 3.5rem;
+  margin-bottom: 16px;
+  animation: petalFloat 5s ease-in-out infinite;
+}
+
+.home-paragon-promo__card-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 4px;
+}
+
+.home-paragon-promo__card-sub {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-sans);
+  margin-bottom: 28px;
+}
+
+.home-paragon-promo__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.home-paragon-promo__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.home-paragon-promo__stat-val {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #e8527a, #f4829f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.home-paragon-promo__stat-lbl {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-sans);
+}
+
+.home-paragon-promo__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  background: rgba(232, 82, 122, 0.18);
+  border: 1px solid rgba(232, 82, 122, 0.3);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #f4829f;
+  font-family: var(--font-sans);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .home-paragon-promo__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+  .home-paragon-promo__desc { max-width: 100%; }
+  .home-paragon-promo__brands { justify-content: center; }
+  .home-paragon-promo__card { width: 100%; max-width: 320px; margin: 0 auto; }
+  .home-paragon-promo__visual { display: flex; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .home-paragon-promo__card { padding: 28px 20px; }
+}
+

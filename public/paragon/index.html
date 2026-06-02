@@ -1,0 +1,2118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PT Paragon Technology and Innovation – Beauty with Purpose</title>
+  <meta name="description" content="PT Paragon Technology and Innovation – Perusahaan kosmetik terkemuka di Indonesia dengan kampanye Beauty with Purpose. Mengelola brand Wardah, Make Over, dan Emina." />
+  <meta name="keywords" content="Paragon, Wardah, Make Over, Emina, kosmetik Indonesia, Beauty with Purpose, kecantikan berkelanjutan" />
+  <meta property="og:title" content="PT Paragon Technology and Innovation – Beauty with Purpose" />
+  <meta property="og:description" content="Cantik yang Menginspirasi, Peduli, dan Berkelanjutan. Kampanye pemasaran terpadu PT Paragon Technology and Innovation." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ================================================
+       CSS CUSTOM PROPERTIES – Paragon Brand System
+       ================================================ */
+    :root {
+      --pink-primary: #e8527a;
+      --pink-light: #f4829f;
+      --pink-soft: #fce8ef;
+      --pink-pale: #fff5f8;
+      --teal: #2da9a0;
+      --teal-light: #4dc4bc;
+      --teal-soft: #e0f5f4;
+      --nude: #d4a98a;
+      --nude-soft: #fdf3ed;
+      --white: #ffffff;
+      --dark: #1a0a14;
+      --dark-mid: #3b1f2e;
+      --text-body: #5a3a4a;
+      --text-muted: #9b7080;
+      --border: #f0d5de;
+
+      --grad-pink: linear-gradient(135deg, #e8527a 0%, #f4829f 100%);
+      --grad-teal: linear-gradient(135deg, #2da9a0 0%, #4dc4bc 100%);
+      --grad-hero: linear-gradient(135deg, #fce8ef 0%, #fff5f8 40%, #e0f5f4 100%);
+      --grad-dark: linear-gradient(135deg, #1a0a14 0%, #3b1f2e 50%, #0f2a28 100%);
+      --grad-card: linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(252,232,239,0.4) 100%);
+
+      --shadow-sm: 0 2px 8px rgba(232, 82, 122, 0.1);
+      --shadow-md: 0 8px 24px rgba(232, 82, 122, 0.15);
+      --shadow-lg: 0 20px 48px rgba(232, 82, 122, 0.2);
+      --shadow-teal: 0 8px 24px rgba(45, 169, 160, 0.2);
+
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 40px;
+      --radius-full: 9999px;
+
+      --font-head: 'Poppins', 'Montserrat', sans-serif;
+      --font-body: 'Open Sans', sans-serif;
+
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ================================================
+       RESET & BASE
+       ================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-body);
+      background: var(--white);
+      color: var(--text-body);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+    /* ================================================
+       TYPOGRAPHY
+       ================================================ */
+    h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.2; color: var(--dark); }
+
+    .text-gradient-pink {
+      background: var(--grad-pink);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .text-gradient-teal {
+      background: var(--grad-teal);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ================================================
+       LAYOUT
+       ================================================ */
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 28px; }
+    .section { padding: 100px 0; }
+    .section-sm { padding: 64px 0; }
+
+    /* ================================================
+       NAVBAR
+       ================================================ */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      transition: var(--transition);
+    }
+    .navbar.scrolled {
+      box-shadow: var(--shadow-md);
+    }
+    .navbar__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .navbar__logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1.15rem;
+    }
+    .navbar__logo-icon {
+      width: 38px; height: 38px;
+      background: var(--grad-pink);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+    .navbar__links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+    .navbar__links a {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-body);
+      transition: var(--transition);
+      position: relative;
+      font-family: var(--font-head);
+    }
+    .navbar__links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0; right: 0;
+      height: 2px;
+      background: var(--grad-pink);
+      transform: scaleX(0);
+      transition: var(--transition);
+      border-radius: 2px;
+    }
+    .navbar__links a:hover { color: var(--pink-primary); }
+    .navbar__links a:hover::after { transform: scaleX(1); }
+    .navbar__back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 20px;
+      background: var(--grad-pink);
+      color: white;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+      font-family: var(--font-head);
+    }
+    .navbar__back:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .navbar__burger {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: var(--dark);
+    }
+
+    /* ================================================
+       HERO SECTION
+       ================================================ */
+    .hero {
+      min-height: 100vh;
+      background: var(--grad-hero);
+      display: flex;
+      align-items: center;
+      padding-top: 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero__blobs {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    .hero__blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.35;
+    }
+    .hero__blob--1 {
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, #f4829f, transparent);
+      top: -200px; right: -100px;
+    }
+    .hero__blob--2 {
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, #4dc4bc, transparent);
+      bottom: -100px; left: -100px;
+    }
+    .hero__blob--3 {
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, #d4a98a, transparent);
+      top: 50%; left: 40%;
+    }
+    .hero__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      padding: 80px 0;
+      position: relative;
+      z-index: 1;
+    }
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      background: rgba(232, 82, 122, 0.1);
+      border: 1px solid rgba(232, 82, 122, 0.25);
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--pink-primary);
+      margin-bottom: 24px;
+      font-family: var(--font-head);
+    }
+    .hero__title {
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      font-weight: 900;
+      line-height: 1.05;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+    .hero__sub {
+      font-size: 1.15rem;
+      color: var(--teal);
+      font-weight: 600;
+      margin-bottom: 24px;
+      font-family: var(--font-head);
+    }
+    .hero__desc {
+      font-size: 1.05rem;
+      color: var(--text-body);
+      line-height: 1.8;
+      margin-bottom: 40px;
+      max-width: 500px;
+    }
+    .hero__actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      background: var(--grad-pink);
+      color: white;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      font-size: 0.95rem;
+      font-family: var(--font-head);
+      transition: var(--transition);
+      box-shadow: var(--shadow-md);
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      background: transparent;
+      color: var(--pink-primary);
+      border: 2px solid var(--pink-light);
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      font-size: 0.95rem;
+      font-family: var(--font-head);
+      transition: var(--transition);
+    }
+    .btn-outline:hover {
+      background: var(--pink-soft);
+      border-color: var(--pink-primary);
+      transform: translateY(-3px);
+    }
+    .btn-teal {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      background: var(--grad-teal);
+      color: white;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      font-size: 0.95rem;
+      font-family: var(--font-head);
+      transition: var(--transition);
+      box-shadow: var(--shadow-teal);
+    }
+    .btn-teal:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 48px rgba(45, 169, 160, 0.35);
+    }
+
+    .hero__image-wrap {
+      position: relative;
+    }
+    .hero__image-frame {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+    }
+    .hero__image-frame img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+    .hero__float-badge {
+      position: absolute;
+      background: white;
+      border-radius: var(--radius-md);
+      padding: 12px 18px;
+      box-shadow: var(--shadow-md);
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .hero__float-badge--1 {
+      bottom: 24px;
+      left: -28px;
+      color: var(--pink-primary);
+    }
+    .hero__float-badge--2 {
+      top: 24px;
+      right: -28px;
+      color: var(--teal);
+    }
+
+    /* ================================================
+       STATS STRIP
+       ================================================ */
+    .stats-strip {
+      background: var(--grad-dark);
+      padding: 56px 0;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+    .stat-item {
+      text-align: center;
+      padding: 16px 24px;
+      border-right: 1px solid rgba(255,255,255,0.1);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-value {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      font-family: var(--font-head);
+      background: var(--grad-pink);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      margin-top: 4px;
+      font-family: var(--font-head);
+    }
+
+    /* ================================================
+       SECTION HEADER
+       ================================================ */
+    .section-header {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 18px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-family: var(--font-head);
+      border-radius: var(--radius-full);
+      margin-bottom: 18px;
+    }
+    .section-label--pink {
+      background: var(--pink-soft);
+      color: var(--pink-primary);
+      border: 1px solid rgba(232,82,122,0.2);
+    }
+    .section-label--teal {
+      background: var(--teal-soft);
+      color: var(--teal);
+      border: 1px solid rgba(45,169,160,0.2);
+    }
+    .section-label--nude {
+      background: var(--nude-soft);
+      color: #8a6040;
+      border: 1px solid rgba(212,169,138,0.3);
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 18px;
+      letter-spacing: -0.01em;
+    }
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* ================================================
+       ABOUT / COMPANY SECTION
+       ================================================ */
+    .about-section { background: var(--white); }
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-content {}
+    .about-content h2 {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 800;
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+    .about-content p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--text-body);
+      margin-bottom: 16px;
+    }
+    .about-pillars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 32px;
+    }
+    .about-pillar {
+      background: var(--grad-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      transition: var(--transition);
+    }
+    .about-pillar:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .about-pillar__icon { font-size: 1.5rem; margin-bottom: 8px; }
+    .about-pillar__title {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+    .about-pillar__text {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .about-visual {
+      position: relative;
+    }
+    .about-visual img {
+      width: 100%;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+    }
+    .about-visual__badge {
+      position: absolute;
+      bottom: -20px;
+      left: 24px;
+      background: white;
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+    }
+    .about-visual__badge-title {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: var(--pink-primary);
+    }
+    .about-visual__badge-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-family: var(--font-head);
+    }
+
+    /* ================================================
+       VISION MISSION
+       ================================================ */
+    .visi-misi { background: var(--pink-pale); }
+    .visi-misi-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+    .vm-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 44px 40px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+    .vm-card__icon {
+      width: 60px; height: 60px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 24px;
+    }
+    .vm-card__icon--pink { background: var(--pink-soft); }
+    .vm-card__icon--teal { background: var(--teal-soft); }
+    .vm-card__title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      font-family: var(--font-head);
+    }
+    .vm-card__text {
+      font-size: 0.97rem;
+      color: var(--text-body);
+      line-height: 1.85;
+    }
+    .misi-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 4px;
+    }
+    .misi-list li {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      font-size: 0.92rem;
+      color: var(--text-body);
+      line-height: 1.6;
+    }
+    .misi-list__num {
+      flex-shrink: 0;
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      background: var(--grad-teal);
+      color: white;
+      font-weight: 700;
+      font-size: 0.75rem;
+      font-family: var(--font-head);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ================================================
+       CAMPAIGN – 5W+1H
+       ================================================ */
+    .campaign { background: white; }
+    .campaign-press {
+      background: var(--grad-dark);
+      border-radius: var(--radius-xl);
+      padding: 56px 64px;
+      margin-bottom: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .campaign-press::before {
+      content: '"';
+      position: absolute;
+      top: -20px;
+      left: 40px;
+      font-size: 200px;
+      font-family: Georgia, serif;
+      color: rgba(232,82,122,0.15);
+      line-height: 1;
+    }
+    .campaign-press__label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 18px;
+      background: rgba(232,82,122,0.2);
+      border: 1px solid rgba(232,82,122,0.3);
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #f4829f;
+      margin-bottom: 20px;
+      font-family: var(--font-head);
+    }
+    .campaign-press h3 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 800;
+      color: white;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+      font-family: var(--font-head);
+    }
+    .campaign-press p {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.97rem;
+      line-height: 1.85;
+      max-width: 700px;
+    }
+    .campaign-press__meta {
+      margin-top: 24px;
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .campaign-press__meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      font-family: var(--font-head);
+    }
+    .campaign-press__meta-item span {
+      color: rgba(255,255,255,0.9);
+      font-weight: 600;
+    }
+
+    .fivew-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .fivew-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .fivew-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--grad-pink);
+    }
+    .fivew-card:nth-child(even)::before { background: var(--grad-teal); }
+    .fivew-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+    .fivew-card__key {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--pink-primary);
+      font-family: var(--font-head);
+      margin-bottom: 6px;
+    }
+    .fivew-card:nth-child(even) .fivew-card__key { color: var(--teal); }
+    .fivew-card__question {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 14px;
+      font-family: var(--font-head);
+    }
+    .fivew-card__answer {
+      font-size: 0.9rem;
+      color: var(--text-body);
+      line-height: 1.75;
+    }
+    .fivew-card__answer ul {
+      padding-left: 18px;
+      margin-top: 8px;
+    }
+    .fivew-card__answer ul li { margin-bottom: 5px; }
+
+    /* ================================================
+       STRATEGY – EXECUTION
+       ================================================ */
+    .strategy { background: var(--pink-pale); }
+    .strategy-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .strategy-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 36px 28px;
+      border: 1px solid var(--border);
+      transition: var(--transition);
+      text-align: center;
+    }
+    .strategy-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+    .strategy-card__icon {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+    .strategy-card__icon--pink { background: var(--pink-soft); }
+    .strategy-card__icon--teal { background: var(--teal-soft); }
+    .strategy-card__icon--nude { background: var(--nude-soft); }
+    .strategy-card__title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      font-family: var(--font-head);
+    }
+    .strategy-card__text {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    /* ================================================
+       BRANDS
+       ================================================ */
+    .brands { background: white; }
+    .brands-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .brand-card {
+      border-radius: var(--radius-lg);
+      padding: 44px 32px;
+      text-align: center;
+      transition: var(--transition);
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .brand-card--wardah { background: linear-gradient(145deg, #fff5f8, #fce8ef); }
+    .brand-card--makeover { background: linear-gradient(145deg, #f0f9ff, #e0f4ff); }
+    .brand-card--emina { background: linear-gradient(145deg, #fff8f0, #ffeedd); }
+    .brand-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+    .brand-card__emoji { font-size: 3rem; margin-bottom: 20px; }
+    .brand-card__name {
+      font-size: 1.8rem;
+      font-weight: 900;
+      margin-bottom: 10px;
+      font-family: var(--font-head);
+    }
+    .brand-card--wardah .brand-card__name { color: var(--pink-primary); }
+    .brand-card--makeover .brand-card__name { color: #1a7bcc; }
+    .brand-card--emina .brand-card__name { color: #e07830; }
+    .brand-card__tagline {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-family: var(--font-head);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 16px;
+    }
+    .brand-card__desc {
+      font-size: 0.9rem;
+      color: var(--text-body);
+      line-height: 1.7;
+    }
+    .brand-card__segment {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 5px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 700;
+      font-family: var(--font-head);
+    }
+    .brand-card--wardah .brand-card__segment {
+      background: var(--pink-soft);
+      color: var(--pink-primary);
+    }
+    .brand-card--makeover .brand-card__segment {
+      background: #e0f4ff;
+      color: #1a7bcc;
+    }
+    .brand-card--emina .brand-card__segment {
+      background: #ffeedd;
+      color: #e07830;
+    }
+
+    /* ================================================
+       CSR SECTION
+       ================================================ */
+    .csr { background: var(--grad-dark); }
+    .csr .section-header .section-label--teal {
+      background: rgba(77, 196, 188, 0.2);
+      color: var(--teal-light);
+      border-color: rgba(77, 196, 188, 0.3);
+    }
+    .csr .section-title { color: white; }
+    .csr .section-subtitle { color: rgba(255,255,255,0.6); }
+    .csr-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .csr-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .csr-card:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(77,196,188,0.4);
+      transform: translateY(-5px);
+    }
+    .csr-card__icon { font-size: 2.4rem; margin-bottom: 16px; }
+    .csr-card__title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 10px;
+      font-family: var(--font-head);
+    }
+    .csr-card__text {
+      font-size: 0.86rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.7;
+    }
+
+    /* ================================================
+       QUOTE / HIGHLIGHT
+       ================================================ */
+    .quote-section { background: var(--pink-pale); }
+    .quote-block {
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 64px 48px;
+      background: white;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-lg);
+      position: relative;
+    }
+    .quote-block::before {
+      content: '"';
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 120px;
+      font-family: Georgia, serif;
+      line-height: 1;
+      background: var(--grad-pink);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      opacity: 0.4;
+    }
+    .quote-block__text {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-style: italic;
+      color: var(--dark-mid);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      font-family: var(--font-head);
+      font-weight: 500;
+    }
+    .quote-block__author {
+      font-size: 0.9rem;
+      font-weight: 700;
+      font-family: var(--font-head);
+      color: var(--pink-primary);
+    }
+    .quote-block__role {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* ================================================
+       STRUKTUR ORGANISASI
+       ================================================ */
+    .org { background: white; }
+    .org-chart {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .org-level {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 0;
+      position: relative;
+    }
+    .org-level + .org-level { margin-top: 0; }
+    .org-connector {
+      display: flex;
+      justify-content: center;
+      padding: 8px 0;
+    }
+    .org-connector::before {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 24px;
+      background: linear-gradient(to bottom, var(--pink-light), var(--teal-light));
+    }
+    .org-node {
+      padding: 12px 20px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-align: center;
+      min-width: 140px;
+      transition: var(--transition);
+    }
+    .org-node:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .org-node--top {
+      background: var(--grad-pink);
+      color: white;
+      font-size: 0.9rem;
+      min-width: 200px;
+    }
+    .org-node--dir {
+      background: var(--grad-dark);
+      color: white;
+      font-size: 0.88rem;
+    }
+    .org-node--mid {
+      background: var(--pink-soft);
+      color: var(--pink-primary);
+      border: 1px solid var(--border);
+    }
+    .org-node--sub {
+      background: var(--teal-soft);
+      color: var(--teal);
+      border: 1px solid rgba(45,169,160,0.2);
+      font-size: 0.8rem;
+      min-width: 100px;
+    }
+    .org-row {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      position: relative;
+    }
+    .org-row--dir {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .org-horizontal-line {
+      height: 2px;
+      background: linear-gradient(90deg, var(--pink-light), var(--teal-light));
+      margin: 0 12px 8px;
+      border-radius: 2px;
+    }
+
+    /* ================================================
+       REFERENCE / KONTAK
+       ================================================ */
+    .contact-section { background: var(--grad-hero); }
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .contact-info h2 {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+    .contact-info p {
+      font-size: 1rem;
+      color: var(--text-body);
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 22px;
+      background: white;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+    .contact-item__icon {
+      width: 44px; height: 44px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .contact-item__icon--pink { background: var(--pink-soft); }
+    .contact-item__icon--teal { background: var(--teal-soft); }
+    .contact-item__icon--nude { background: var(--nude-soft); }
+    .contact-item__label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-family: var(--font-head);
+    }
+    .contact-item__value {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--dark);
+      font-family: var(--font-head);
+    }
+    .references-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+    }
+    .references-card h3 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      font-family: var(--font-head);
+    }
+    .ref-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .ref-list li {
+      display: flex;
+      gap: 12px;
+      font-size: 0.82rem;
+      color: var(--text-body);
+      line-height: 1.6;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .ref-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .ref-list__num {
+      flex-shrink: 0;
+      font-weight: 700;
+      color: var(--pink-primary);
+      font-family: var(--font-head);
+    }
+
+    /* ================================================
+       FOOTER
+       ================================================ */
+    .footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.7);
+      padding: 56px 0 32px;
+    }
+    .footer__inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 64px;
+      margin-bottom: 48px;
+    }
+    .footer__brand-name {
+      font-family: var(--font-head);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 12px;
+    }
+    .footer__brand-desc {
+      font-size: 0.88rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.5);
+    }
+    .footer__social-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .footer__social {
+      width: 36px; height: 36px;
+      border-radius: var(--radius-sm);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .footer__social:hover {
+      background: var(--pink-primary);
+      border-color: var(--pink-primary);
+      transform: translateY(-2px);
+    }
+    .footer__col-title {
+      font-family: var(--font-head);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: white;
+      margin-bottom: 18px;
+    }
+    .footer__col-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer__col-links a {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.5);
+      transition: var(--transition);
+    }
+    .footer__col-links a:hover { color: var(--pink-light); }
+    .footer__bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.35);
+    }
+    .footer__bottom a { color: var(--pink-light); font-weight: 600; }
+
+    /* ================================================
+       SCROLL ANIMATIONS
+       ================================================ */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+    .delay-5 { transition-delay: 0.5s; }
+    .delay-6 { transition-delay: 0.6s; }
+
+    /* ================================================
+       MOBILE MENU
+       ================================================ */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 72px;
+      left: 0; right: 0;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(20px);
+      padding: 20px 28px 28px;
+      border-bottom: 1px solid var(--border);
+      z-index: 999;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      padding: 12px 0;
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--dark);
+      border-bottom: 1px solid var(--border);
+      transition: var(--transition);
+    }
+    .mobile-menu a:hover { color: var(--pink-primary); }
+
+    /* ================================================
+       RESPONSIVE
+       ================================================ */
+    @media (max-width: 1024px) {
+      .hero__inner { grid-template-columns: 1fr; gap: 48px; }
+      .hero__image-wrap { order: -1; }
+      .hero__float-badge--1 { left: 16px; }
+      .hero__float-badge--2 { right: 16px; }
+      .about-inner { grid-template-columns: 1fr; gap: 48px; }
+      .visi-misi-grid { grid-template-columns: 1fr; }
+      .fivew-grid { grid-template-columns: repeat(2, 1fr); }
+      .strategy-grid { grid-template-columns: repeat(2, 1fr); }
+      .brands-grid { grid-template-columns: repeat(2, 1fr); }
+      .csr-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-inner { grid-template-columns: 1fr; gap: 48px; }
+      .footer__inner { grid-template-columns: 1fr 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    }
+
+    @media (max-width: 768px) {
+      .navbar__links, .navbar__back { display: none; }
+      .navbar__burger { display: block; }
+      .hero__inner { padding: 40px 0 60px; }
+      .hero__title { font-size: 2.4rem; }
+      .fivew-grid { grid-template-columns: 1fr; }
+      .strategy-grid { grid-template-columns: 1fr; }
+      .brands-grid { grid-template-columns: 1fr; }
+      .csr-grid { grid-template-columns: 1fr 1fr; }
+      .campaign-press { padding: 36px 28px; }
+      .footer__inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer__bottom { flex-direction: column; gap: 8px; text-align: center; }
+      .section { padding: 72px 0; }
+      .org-row--dir { grid-template-columns: repeat(2, 1fr); }
+      .about-pillars { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 18px; }
+      .csr-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .hero__actions { flex-direction: column; }
+      .quote-block { padding: 40px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================================================
+       NAVBAR
+       ================================================ -->
+  <header class="navbar" id="main-navbar">
+    <div class="container navbar__inner">
+      <a href="#hero" class="navbar__logo" id="logo-paragon">
+        <div class="navbar__logo-icon">🌸</div>
+        <span>
+          <span class="text-gradient-pink">Paragon</span>
+          <span style="color: var(--text-muted); font-weight: 500; font-size: 0.85rem; display: block; margin-top: -4px;">Technology & Innovation</span>
+        </span>
+      </a>
+
+      <ul class="navbar__links">
+        <li><a href="#tentang" id="nav-tentang">Tentang</a></li>
+        <li><a href="#visi-misi" id="nav-visimisi">Visi & Misi</a></li>
+        <li><a href="#kampanye" id="nav-kampanye">Kampanye</a></li>
+        <li><a href="#brand" id="nav-brand">Brand</a></li>
+        <li><a href="#csr" id="nav-csr">CSR</a></li>
+        <li><a href="#kontak" id="nav-kontak">Kontak</a></li>
+      </ul>
+
+      <a href="https://lenysundariarnas.my.id" class="navbar__back" id="nav-back-home">
+        ← Kembali ke Portofolio
+      </a>
+
+      <button class="navbar__burger" id="nav-burger-btn" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#tentang" onclick="toggleMenu()">Tentang Perusahaan</a>
+    <a href="#visi-misi" onclick="toggleMenu()">Visi & Misi</a>
+    <a href="#kampanye" onclick="toggleMenu()">Kampanye Beauty with Purpose</a>
+    <a href="#brand" onclick="toggleMenu()">Brand Kami</a>
+    <a href="#csr" onclick="toggleMenu()">CSR & Tanggung Jawab</a>
+    <a href="#kontak" onclick="toggleMenu()">Kontak</a>
+    <a href="https://lenysundariarnas.my.id" style="color: var(--pink-primary);">← Kembali ke Portofolio</a>
+  </div>
+
+  <main>
+    <!-- ================================================
+         HERO SECTION
+         ================================================ -->
+    <section class="hero" id="hero">
+      <div class="hero__blobs" aria-hidden="true">
+        <div class="hero__blob hero__blob--1"></div>
+        <div class="hero__blob hero__blob--2"></div>
+        <div class="hero__blob hero__blob--3"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero__inner">
+          <!-- Hero Text -->
+          <div class="hero__content">
+            <div class="hero__badge" id="hero-badge">
+              ✨ Kampanye Pemasaran Terpadu 2026
+            </div>
+            <h1 class="hero__title">
+              <span class="text-gradient-pink">BEAUTY</span><br />
+              <span style="color: var(--dark);">WITH</span><br />
+              <span class="text-gradient-teal">PURPOSE</span>
+            </h1>
+            <p class="hero__sub">
+              Cantik yang Menginspirasi, Peduli &amp; Berkelanjutan
+            </p>
+            <p class="hero__desc">
+              PT Paragon Technology and Innovation menghadirkan kampanye pemasaran terpadu
+              yang meyakini bahwa kecantikan sejati bukan hanya soal penampilan —
+              tetapi juga tentang nilai sosial, empowerment perempuan, dan keberlanjutan lingkungan.
+            </p>
+            <div class="hero__actions">
+              <a href="#kampanye" class="btn-primary" id="hero-cta-kampanye">
+                🚀 Kenali Kampanye
+              </a>
+              <a href="#brand" class="btn-outline" id="hero-cta-brand">
+                Lihat Brand Kami
+              </a>
+              <a href="https://paragoncorp.com" target="_blank" rel="noopener noreferrer" class="btn-teal" id="hero-cta-official">
+                🌐 Website Resmi
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Image -->
+          <div class="hero__image-wrap">
+            <div class="hero__image-frame">
+              <img
+                src="./hero-banner.png"
+                alt="Beauty with Purpose – PT Paragon Technology and Innovation"
+                id="hero-banner-img"
+                onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #fce8ef, #e0f5f4)'; this.parentElement.style.minHeight='500px'; this.parentElement.innerHTML += '<div style=\'display:flex;align-items:center;justify-content:center;height:500px;font-size:5rem;\'>🌸</div>'"
+              />
+            </div>
+            <div class="hero__float-badge hero__float-badge--1">
+              🌸 Beauty Expert
+            </div>
+            <div class="hero__float-badge hero__float-badge--2">
+              ♻️ Berkelanjutan
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         STATS STRIP
+         ================================================ -->
+    <section class="stats-strip" id="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item fade-up delay-1" id="stat-brand">
+            <div class="stat-value">3+</div>
+            <div class="stat-label">Brand Terkemuka</div>
+          </div>
+          <div class="stat-item fade-up delay-2" id="stat-tahun">
+            <div class="stat-value">30+</div>
+            <div class="stat-label">Tahun Berpengalaman</div>
+          </div>
+          <div class="stat-item fade-up delay-3" id="stat-produk">
+            <div class="stat-value">100+</div>
+            <div class="stat-label">Produk Kecantikan</div>
+          </div>
+          <div class="stat-item fade-up delay-4" id="stat-misi">
+            <div class="stat-value">7</div>
+            <div class="stat-label">Misi Perusahaan</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         TENTANG PERUSAHAAN
+         ================================================ -->
+    <section class="about-section section" id="tentang">
+      <div class="container">
+        <div class="about-inner">
+          <!-- Visual -->
+          <div class="about-visual fade-up delay-1">
+            <img
+              src="./products.png"
+              alt="Produk kosmetik Paragon – Wardah, Make Over, Emina"
+              id="about-products-img"
+              onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #fce8ef, #e0f5f4)'; this.parentElement.style.borderRadius='24px'; this.parentElement.style.minHeight='400px'; this.parentElement.innerHTML += '<div style=\'display:flex;align-items:center;justify-content:center;height:400px;font-size:5rem;\'>💄</div>'"
+            />
+            <div class="about-visual__badge">
+              <div class="about-visual__badge-title">Est. 1985</div>
+              <div class="about-visual__badge-sub">Indonesia's Leading Beauty Co.</div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="about-content fade-up delay-2">
+            <div class="section-label section-label--pink">🏢 Tentang Perusahaan</div>
+            <h2>PT Paragon<br /><span class="text-gradient-pink">Technology and Innovation</span></h2>
+            <p>
+              PT Paragon Technology and Innovation adalah perusahaan yang berfokus pada sektor
+              pembuatan kosmetik serta barang-barang perawatan diri. Aktivitas bisnisnya melibatkan
+              tahapan produksi, riset dan pengembangan, distribusi, serta promosi produk kecantikan
+              yang ditujukan untuk memenuhi kebutuhan konsumen, terutama di wilayah Indonesia.
+            </p>
+            <p>
+              Perusahaan ini berkomitmen untuk menjadi entitas bisnis yang memberikan manfaat
+              berkelanjutan bagi masyarakat, dengan menghadirkan produk berkualitas tinggi,
+              mendorong inovasi secara konsisten, dan berkontribusi pada pembangunan sosial
+              dan lingkungan.
+            </p>
+
+            <div class="about-pillars">
+              <div class="about-pillar" id="pillar-skincare">
+                <div class="about-pillar__icon">✨</div>
+                <div class="about-pillar__title">Skincare & Makeup</div>
+                <div class="about-pillar__text">Produk kecantikan berkualitas tinggi untuk berbagai jenis kulit</div>
+              </div>
+              <div class="about-pillar" id="pillar-rd">
+                <div class="about-pillar__icon">🔬</div>
+                <div class="about-pillar__title">Riset & Inovasi</div>
+                <div class="about-pillar__text">R&D berkelanjutan untuk formula kosmetik terkini</div>
+              </div>
+              <div class="about-pillar" id="pillar-distribusi">
+                <div class="about-pillar__icon">🛍️</div>
+                <div class="about-pillar__title">Distribusi Luas</div>
+                <div class="about-pillar__text">Ritel, e-commerce, dan jaringan distributor nasional</div>
+              </div>
+              <div class="about-pillar" id="pillar-digital">
+                <div class="about-pillar__icon">📱</div>
+                <div class="about-pillar__title">Pemasaran Digital</div>
+                <div class="about-pillar__text">Strategi influencer marketing dan brand campaign modern</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         VISI & MISI
+         ================================================ -->
+    <section class="visi-misi section" id="visi-misi">
+      <div class="container">
+        <div class="section-header fade-up">
+          <div class="section-label section-label--teal">🎯 Arah Perusahaan</div>
+          <h2 class="section-title">Visi &amp; Misi</h2>
+          <p class="section-subtitle">
+            Komitmen PT Paragon Technology and Innovation untuk menjadikan setiap hari
+            lebih baik melalui produk berkualitas yang bermanfaat bagi semua.
+          </p>
+        </div>
+
+        <div class="visi-misi-grid">
+          <!-- VISI -->
+          <div class="vm-card fade-up delay-1" id="card-visi">
+            <div class="vm-card__icon vm-card__icon--pink">👁️</div>
+            <h3 class="vm-card__title text-gradient-pink">Visi</h3>
+            <p class="vm-card__text">
+              Sebuah perusahaan yang berkomitmen untuk memiliki tata kelola perusahaan
+              terbaik dan perbaikan berkelanjutan, guna menjadikan setiap hari lebih baik
+              dari hari sebelumnya, melalui produk berkualitas tinggi yang bermanfaat bagi
+              Paragonians, mitra, masyarakat, dan lingkungan.
+            </p>
+          </div>
+
+          <!-- MISI -->
+          <div class="vm-card fade-up delay-2" id="card-misi">
+            <div class="vm-card__icon vm-card__icon--teal">🚀</div>
+            <h3 class="vm-card__title text-gradient-teal">Misi</h3>
+            <ul class="misi-list">
+              <li>
+                <span class="misi-list__num">1</span>
+                <span><strong>Mengembangkan Paragonian</strong> – Terus belajar dan mengembangkan SDM yang kompeten dengan keunggulan kompetitif.</span>
+              </li>
+              <li>
+                <span class="misi-list__num">2</span>
+                <span><strong>Menciptakan Kebaikan untuk Konsumen</strong> – Mendengarkan kebutuhan dan menciptakan produk yang melebihi harapan.</span>
+              </li>
+              <li>
+                <span class="misi-list__num">3</span>
+                <span><strong>Perbaikan Berkelanjutan</strong> – Terus berinovasi di setiap proses untuk meningkatkan kualitas produk.</span>
+              </li>
+              <li>
+                <span class="misi-list__num">4</span>
+                <span><strong>Berkembang Bersama</strong> – Bekerja sama dengan mitra bisnis untuk keuntungan bersama.</span>
+              </li>
+              <li>
+                <span class="misi-list__num">5</span>
+                <span><strong>Melestarikan Bumi</strong> – Melindungi bumi secara berkelanjutan karena bumi menyediakan semua yang kita butuhkan.</span>
+              </li>
+              <li>
+                <span class="misi-list__num">6</span>
+                <span><strong>Mendukung Pendidikan & Kesehatan Bangsa</strong> – Pengembangan generasi baru melalui SDM berpengetahuan dan sehat.</span>
+              </li>
+              <li>
+                <span class="misi-list__num">7</span>
+                <span><strong>Mengembangkan Bisnis</strong> – Memperluas berbagai produk dan layanan melalui perluasan bisnis.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         STRUKTUR ORGANISASI
+         ================================================ -->
+    <section class="org section" id="struktur">
+      <div class="container">
+        <div class="section-header fade-up">
+          <div class="section-label section-label--nude">🏗️ Tata Kelola</div>
+          <h2 class="section-title">Struktur Organisasi</h2>
+          <p class="section-subtitle">
+            Kepemimpinan dan struktur tata kelola PT Paragon Technology and Innovation
+            yang terorganisasi secara profesional.
+          </p>
+        </div>
+
+        <div class="org-chart fade-up delay-1">
+          <!-- Komisaris -->
+          <div class="org-level">
+            <div class="org-node org-node--top" id="org-komisaris">
+              👑 Komisaris<br /><small style="font-weight:400;font-size:0.78rem;">Nurhayati Subakat</small>
+            </div>
+          </div>
+          <div class="org-connector"></div>
+
+          <!-- Direktur Utama -->
+          <div class="org-level">
+            <div class="org-node org-node--dir" id="org-dirut">
+              Direktur Utama<br /><small style="font-weight:400;font-size:0.78rem;">Salman Subakat</small>
+            </div>
+          </div>
+          <div class="org-connector"></div>
+
+          <!-- Line -->
+          <div class="org-horizontal-line"></div>
+
+          <!-- 4 Direktur -->
+          <div class="org-row org-row--dir fade-up delay-2">
+            <div class="org-node org-node--mid" id="org-dir-operasional">📦 Dir. Operasional</div>
+            <div class="org-node org-node--mid" id="org-dir-marketing">📣 Dir. Marketing<br /><small>Nurhayati Subakat</small></div>
+            <div class="org-node org-node--mid" id="org-dir-development">🔬 Dir. Development</div>
+            <div class="org-node org-node--mid" id="org-dir-keuangan">💰 Dir. Keuangan</div>
+          </div>
+          <div class="org-connector"></div>
+
+          <!-- Sub Divisi -->
+          <div class="org-row fade-up delay-3" style="flex-wrap:wrap;gap:10px;justify-content:center;max-width:760px;margin:0 auto;">
+            <div class="org-node org-node--sub" id="org-pabrik">🏭 Pabrik</div>
+            <div class="org-node org-node--sub" id="org-dc">📦 Coord. DC</div>
+            <div class="org-node org-node--sub" id="org-promosi">📢 Promosi</div>
+            <div class="org-node org-node--sub" id="org-sales">🛒 Sales</div>
+            <div class="org-node org-node--sub" id="org-rd">🔬 R&D</div>
+            <div class="org-node org-node--sub" id="org-proddev">💡 Prod. Dev.</div>
+            <div class="org-node org-node--sub" id="org-keuangan-div">💳 Keuangan</div>
+            <div class="org-node org-node--sub" id="org-akuntansi">📊 Akuntansi</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         KAMPANYE – BEAUTY WITH PURPOSE
+         ================================================ -->
+    <section class="campaign section" id="kampanye">
+      <div class="container">
+        <div class="section-header fade-up">
+          <div class="section-label section-label--pink">🌸 Kampanye 2026</div>
+          <h2 class="section-title">
+            "<span class="text-gradient-pink">Beauty</span> with <span class="text-gradient-teal">Purpose</span>"
+          </h2>
+          <p class="section-subtitle">
+            Kampanye pemasaran terpadu yang menggabungkan komunikasi digital,
+            kolaborasi influencer, dan kegiatan sosial untuk perempuan Indonesia.
+          </p>
+        </div>
+
+        <!-- Press Release Block -->
+        <div class="campaign-press fade-up" id="press-release">
+          <div class="campaign-press__label">📄 Press Release</div>
+          <h3>Paragon Luncurkan Kampanye "Beauty with Purpose" sebagai Strategi Komunikasi Pemasaran Terpadu</h3>
+          <p>
+            <strong style="color:rgba(255,255,255,0.9)">Jakarta, 7 Mei 2026</strong> — PT Paragon Technology and Innovation meluncurkan kampanye
+            pemasaran terpadu "Beauty with Purpose" di Jakarta pada Mei 2026 yang menyasar perempuan
+            muda melalui pendekatan komunikasi digital dan kegiatan sosial. Di tengah meningkatnya
+            persaingan di industri kecantikan dan perilaku konsumen yang semakin bergantung pada
+            media digital, kampanye ini dirancang untuk meningkatkan brand awareness dan citra perusahaan.
+            Mereka memanfaatkan media sosial, bekerja sama dengan influencer, dan menerapkan program
+            Corporate Social Responsibility (CSR).
+          </p>
+          <p style="margin-top:12px;">
+            Perwakilan perusahaan menyatakan, <em style="color:rgba(255,255,255,0.85)">"Melalui kampanye ini, kami berupaya membangun
+            pemahaman bahwa kecantikan tidak hanya berkaitan dengan aspek estetika, tetapi juga
+            memiliki dimensi sosial dan lingkungan."</em>
+          </p>
+          <div class="campaign-press__meta">
+            <div class="campaign-press__meta-item">📅 <span>7 Mei 2026</span></div>
+            <div class="campaign-press__meta-item">📍 <span>Jakarta, Indonesia</span></div>
+            <div class="campaign-press__meta-item">🎯 <span>Perempuan Muda Indonesia</span></div>
+            <div class="campaign-press__meta-item">📱 <span>Instagram & TikTok</span></div>
+          </div>
+        </div>
+
+        <!-- 5W + 1H Cards -->
+        <div class="fivew-grid">
+          <div class="fivew-card fade-up delay-1" id="card-what">
+            <div class="fivew-card__key">What · Apa</div>
+            <h3 class="fivew-card__question">Peluncuran Kampanye</h3>
+            <p class="fivew-card__answer">
+              Peluncuran kampanye pemasaran terpadu <strong>"Beauty With Purpose"</strong> — strategi komunikasi yang menggabungkan pendekatan digital, influencer, dan CSR secara terintegrasi.
+            </p>
+          </div>
+
+          <div class="fivew-card fade-up delay-2" id="card-who">
+            <div class="fivew-card__key">Who · Siapa</div>
+            <h3 class="fivew-card__question">Pelaksana & Sasaran</h3>
+            <p class="fivew-card__answer">
+              <strong>Pelaksana:</strong> PT Paragon Technology and Innovation<br />
+              <strong>Target:</strong> Perempuan muda Indonesia<br />
+              <strong>Pendukung:</strong> Influencer, tim Corporate Communication, komunitas perempuan
+            </p>
+          </div>
+
+          <div class="fivew-card fade-up delay-3" id="card-when">
+            <div class="fivew-card__key">When · Kapan</div>
+            <h3 class="fivew-card__question">Waktu Pelaksanaan</h3>
+            <p class="fivew-card__answer">
+              <strong>Peluncuran:</strong> 7 Mei 2026<br />
+              <strong>Periode kegiatan:</strong> Mei 2026<br />
+              Dengan pengembangan ke berbagai daerah Indonesia selanjutnya.
+            </p>
+          </div>
+
+          <div class="fivew-card fade-up delay-4" id="card-where">
+            <div class="fivew-card__key">Where · Di Mana</div>
+            <h3 class="fivew-card__question">Lokasi Kegiatan</h3>
+            <p class="fivew-card__answer">
+              <strong>Pusat:</strong> Jakarta, Indonesia<br />
+              <strong>Pengembangan:</strong> Berbagai daerah Indonesia melalui platform digital dan kegiatan CSR regional.
+            </p>
+          </div>
+
+          <div class="fivew-card fade-up delay-5" id="card-why">
+            <div class="fivew-card__key">Why · Mengapa</div>
+            <h3 class="fivew-card__question">Alasan Kampanye</h3>
+            <div class="fivew-card__answer">
+              <ul>
+                <li>Meningkatnya kompetisi di sektor kecantikan</li>
+                <li>Perpindahan pola konsumsi ke platform digital</li>
+                <li>Meningkatkan kesadaran merek (brand awareness)</li>
+                <li>Menguatkan identitas perusahaan</li>
+                <li>Memperbaiki loyalitas pelanggan dan citra perusahaan</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="fivew-card fade-up delay-6" id="card-how">
+            <div class="fivew-card__key">How · Bagaimana</div>
+            <h3 class="fivew-card__question">Metode Pelaksanaan</h3>
+            <div class="fivew-card__answer">
+              <ul>
+                <li>Platform sosial: Instagram &amp; TikTok</li>
+                <li>Kolaborasi dengan influencer kecantikan</li>
+                <li>CSR: pelatihan kewirausahaan bagi wanita</li>
+                <li>Edukasi produk ramah lingkungan</li>
+                <li>Komunikasi dua arah dengan audiens</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         STRATEGI EKSEKUSI
+         ================================================ -->
+    <section class="strategy section" id="strategi">
+      <div class="container">
+        <div class="section-header fade-up">
+          <div class="section-label section-label--teal">⚡ Eksekusi Kampanye</div>
+          <h2 class="section-title">Strategi Komunikasi</h2>
+          <p class="section-subtitle">
+            Tiga pilar utama yang menopang keberhasilan kampanye "Beauty with Purpose"
+            secara terukur dan berkelanjutan.
+          </p>
+        </div>
+
+        <div class="strategy-grid">
+          <div class="strategy-card fade-up delay-1" id="strategy-digital">
+            <div class="strategy-card__icon strategy-card__icon--pink">📱</div>
+            <h3 class="strategy-card__title">Komunikasi Digital</h3>
+            <p class="strategy-card__text">
+              Konten inspiratif di Instagram &amp; TikTok, kolaborasi influencer kecantikan,
+              interaksi langsung melalui live session, Q&amp;A, kuis, dan komentar.
+              Konten edukatif seputar kecantikan dan keberlanjutan.
+            </p>
+          </div>
+
+          <div class="strategy-card fade-up delay-2" id="strategy-csr">
+            <div class="strategy-card__icon strategy-card__icon--teal">🤝</div>
+            <h3 class="strategy-card__title">Corporate Social Responsibility</h3>
+            <p class="strategy-card__text">
+              Pelatihan kewirausahaan bagi perempuan di berbagai daerah,
+              edukasi penggunaan produk ramah lingkungan, dan program
+              pemberdayaan komunitas perempuan dan UMKM.
+            </p>
+          </div>
+
+          <div class="strategy-card fade-up delay-3" id="strategy-komunikasi">
+            <div class="strategy-card__icon strategy-card__icon--nude">💬</div>
+            <h3 class="strategy-card__title">Komunikasi Dua Arah</h3>
+            <p class="strategy-card__text">
+              Mendengarkan suara konsumen secara aktif, merespon cepat
+              terhadap masukan, dan membangun komunitas yang aktif,
+              positif, dan suportif di sekitar brand Paragon.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         BRAND SECTION
+         ================================================ -->
+    <section class="brands section" id="brand">
+      <div class="container">
+        <div class="section-header fade-up">
+          <div class="section-label section-label--pink">💄 Portfolio Brand</div>
+          <h2 class="section-title">Brand <span class="text-gradient-pink">Unggulan</span> Kami</h2>
+          <p class="section-subtitle">
+            Tiga brand kecantikan terkemuka yang dikelola PT Paragon Technology and Innovation,
+            masing-masing dengan segmen konsumen dan pendekatan komunikasi yang unik.
+          </p>
+        </div>
+
+        <div class="brands-grid">
+          <!-- Wardah -->
+          <div class="brand-card brand-card--wardah fade-up delay-1" id="brand-wardah">
+            <div class="brand-card__emoji">🌸</div>
+            <div class="brand-card__name">Wardah</div>
+            <div class="brand-card__tagline">Inspiring Beauty</div>
+            <p class="brand-card__desc">
+              Brand kecantikan halal terkemuka di Indonesia yang menginspirasi
+              perempuan untuk tampil cantik dengan percaya diri. Mengutamakan
+              produk halal berkualitas untuk perempuan muslim modern.
+            </p>
+            <span class="brand-card__segment">Halal Beauty · Semua Usia</span>
+          </div>
+
+          <!-- Make Over -->
+          <div class="brand-card brand-card--makeover fade-up delay-2" id="brand-makeover">
+            <div class="brand-card__emoji">💙</div>
+            <div class="brand-card__name">Make Over</div>
+            <div class="brand-card__tagline">Professional Makeup</div>
+            <p class="brand-card__desc">
+              Brand makeup premium berkonsep profesional untuk perempuan
+              berkarakter kuat yang ingin tampil bold dan percaya diri.
+              Formulasi high-performance untuk hasil makeup tahan lama.
+            </p>
+            <span class="brand-card__segment">Premium · Professional</span>
+          </div>
+
+          <!-- Emina -->
+          <div class="brand-card brand-card--emina fade-up delay-3" id="brand-emina">
+            <div class="brand-card__emoji">🌻</div>
+            <div class="brand-card__name">Emina</div>
+            <div class="brand-card__tagline">Fun & Fresh Beauty</div>
+            <p class="brand-card__desc">
+              Brand kecantikan yang ceria, fresh, dan terjangkau untuk
+              remaja dan perempuan muda. Hadir dengan produk playful
+              yang cocok untuk mengekspresikan diri dengan warna-warna
+              cerah dan formula ringan.
+            </p>
+            <span class="brand-card__segment">Youth · Gen-Z Friendly</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         CSR SECTION
+         ================================================ -->
+    <section class="csr section" id="csr">
+      <div class="container">
+        <div class="section-header fade-up">
+          <div class="section-label section-label--teal">🌿 Tanggung Jawab Sosial</div>
+          <h2 class="section-title">CSR &amp; <span class="text-gradient-teal">Keberlanjutan</span></h2>
+          <p class="section-subtitle">
+            Komitmen nyata Paragon dalam memberdayakan masyarakat, lingkungan,
+            dan generasi penerus bangsa Indonesia.
+          </p>
+        </div>
+
+        <div class="csr-grid">
+          <div class="csr-card fade-up delay-1" id="csr-perempuan">
+            <div class="csr-card__icon">👩‍💼</div>
+            <h4 class="csr-card__title">Pemberdayaan Perempuan</h4>
+            <p class="csr-card__text">
+              Inisiatif pelatihan kewirausahaan bagi perempuan di berbagai daerah Indonesia
+              untuk meningkatkan kemandirian ekonomi.
+            </p>
+          </div>
+          <div class="csr-card fade-up delay-2" id="csr-lingkungan">
+            <div class="csr-card__icon">♻️</div>
+            <h4 class="csr-card__title">Produk Ramah Lingkungan</h4>
+            <p class="csr-card__text">
+              Edukasi dan kampanye penggunaan produk kosmetik yang ramah
+              lingkungan dan berkelanjutan untuk masa depan bumi.
+            </p>
+          </div>
+          <div class="csr-card fade-up delay-3" id="csr-pendidikan">
+            <div class="csr-card__icon">📚</div>
+            <h4 class="csr-card__title">Pendidikan &amp; Kesehatan</h4>
+            <p class="csr-card__text">
+              Mendukung pengembangan generasi baru melalui program beasiswa
+              dan edukasi kesehatan untuk Indonesia yang lebih baik.
+            </p>
+          </div>
+          <div class="csr-card fade-up delay-4" id="csr-umkm">
+            <div class="csr-card__icon">🤝</div>
+            <h4 class="csr-card__title">Komunitas &amp; UMKM</h4>
+            <p class="csr-card__text">
+              Program pendampingan komunitas perempuan dan pelaku UMKM
+              untuk tumbuh bersama dalam ekosistem bisnis yang inklusif.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         QUOTE SECTION
+         ================================================ -->
+    <section class="quote-section section" id="kutipan">
+      <div class="container">
+        <div class="quote-block fade-up" id="quote-main">
+          <p class="quote-block__text">
+            "Kampanye ini bertujuan untuk meningkatkan kesadaran bahwa kecantikan
+            tidak hanya berhubungan dengan aspek estetika, tetapi juga memiliki
+            dimensi sosial dan lingkungan yang harus kita jaga bersama."
+          </p>
+          <div class="quote-block__author text-gradient-pink">Corporate Communication</div>
+          <div class="quote-block__role">PT Paragon Technology and Innovation</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         KONTAK & REFERENSI
+         ================================================ -->
+    <section class="contact-section section" id="kontak">
+      <div class="container">
+        <div class="contact-inner">
+          <!-- Kontak -->
+          <div class="fade-up delay-1">
+            <div class="section-label section-label--pink" style="margin-bottom:16px;">📞 Hubungi Kami</div>
+            <h2 class="contact-info">
+              Informasi <span class="text-gradient-pink">Kontak</span>
+            </h2>
+            <p style="margin: 16px 0 32px; color: var(--text-body); font-size: 1rem; line-height: 1.8;">
+              Hubungi tim Corporate Communication PT Paragon Technology and Innovation
+              untuk informasi lebih lanjut tentang kampanye "Beauty with Purpose".
+            </p>
+
+            <div class="contact-details">
+              <div class="contact-item" id="contact-email">
+                <div class="contact-item__icon contact-item__icon--pink">📧</div>
+                <div>
+                  <div class="contact-item__label">Email</div>
+                  <div class="contact-item__value">info@paragon-innovation.com</div>
+                </div>
+              </div>
+              <div class="contact-item" id="contact-phone">
+                <div class="contact-item__icon contact-item__icon--teal">📞</div>
+                <div>
+                  <div class="contact-item__label">Telepon</div>
+                  <div class="contact-item__value">(021) 585 2439</div>
+                </div>
+              </div>
+              <div class="contact-item" id="contact-web">
+                <div class="contact-item__icon contact-item__icon--nude">🌐</div>
+                <div>
+                  <div class="contact-item__label">Website Resmi</div>
+                  <div class="contact-item__value">
+                    <a href="https://paragoncorp.com" target="_blank" rel="noopener noreferrer" style="color: var(--pink-primary); text-decoration: underline;">
+                      paragoncorp.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-item" id="contact-location">
+                <div class="contact-item__icon contact-item__icon--pink">📍</div>
+                <div>
+                  <div class="contact-item__label">Lokasi</div>
+                  <div class="contact-item__value">Jakarta, Indonesia</div>
+                </div>
+              </div>
+              <div class="contact-item" id="contact-social">
+                <div class="contact-item__icon contact-item__icon--teal">📲</div>
+                <div>
+                  <div class="contact-item__label">Media Sosial</div>
+                  <div class="contact-item__value">@paragon.id</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Referensi -->
+          <div class="references-card fade-up delay-2" id="references-card">
+            <h3>📚 Daftar Pustaka</h3>
+            <ul class="ref-list">
+              <li>
+                <span class="ref-list__num">1.</span>
+                <span>BMP SKOM4332 – Modul Komunikasi Pemasaran Terpadu</span>
+              </li>
+              <li>
+                <span class="ref-list__num">2.</span>
+                <span>Wilcox, D. L., Cameron, G. T., & Reber, B. H. (2018). <em>Public Relations Strategies and Tactics</em>. Eleventh Edition.</span>
+              </li>
+              <li>
+                <span class="ref-list__num">3.</span>
+                <span>Bivins, T. (2003). <em>Mixed Media: Moral Distinctions in Advertising, Public Relations, and Journalism.</em> Routledge.</span>
+              </li>
+              <li>
+                <span class="ref-list__num">4.</span>
+                <span>Cole, R. T., Hembroff, L. A., & Corner, A. D. (2009). National assessment of the perceived writing skills of entry-level PR practitioners. <em>Journalism & Mass Communication Educator.</em></span>
+              </li>
+              <li>
+                <span class="ref-list__num">5.</span>
+                <span>Puspitsari, I. P. (2025). Perencanaan Strategi PT. Paragon Technology and Innovation di Era Society 5.0. <em>SITEKNIK, 2(3),</em> 240-248.</span>
+              </li>
+              <li>
+                <span class="ref-list__num">6.</span>
+                <span>Tysara, L. (2022). Profil PT Paragon Technology and Innovation, Perusahaan Kecantikan Indonesia. <em>Liputan6.com.</em></span>
+              </li>
+              <li>
+                <span class="ref-list__num">7.</span>
+                <span>
+                  <a href="https://paragoncorp.com" target="_blank" rel="noopener noreferrer" style="color: var(--pink-primary);">paragoncorp.com</a>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================================================
+       FOOTER
+       ================================================ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__brand-name">PT Paragon Technology and Innovation</div>
+          <p class="footer__brand-desc">
+            Perusahaan kosmetik dan perawatan diri terkemuka di Indonesia
+            yang berkomitmen menghadirkan produk berkualitas tinggi melalui
+            inovasi, keberlanjutan, dan pemberdayaan perempuan.
+          </p>
+          <div class="footer__social-row">
+            <div class="footer__social" title="Instagram">📸</div>
+            <div class="footer__social" title="TikTok">🎵</div>
+            <div class="footer__social" title="YouTube">▶️</div>
+            <div class="footer__social" title="LinkedIn">💼</div>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">Brand</div>
+          <ul class="footer__col-links">
+            <li><a href="#brand-wardah">🌸 Wardah</a></li>
+            <li><a href="#brand-makeover">💙 Make Over</a></li>
+            <li><a href="#brand-emina">🌻 Emina</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Navigasi</div>
+          <ul class="footer__col-links">
+            <li><a href="#tentang">Tentang Perusahaan</a></li>
+            <li><a href="#visi-misi">Visi &amp; Misi</a></li>
+            <li><a href="#kampanye">Kampanye Beauty with Purpose</a></li>
+            <li><a href="#csr">CSR &amp; Sustainability</a></li>
+            <li><a href="https://lenysundariarnas.my.id">← Portofolio Lenny</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© 2026 Weblog Perusahaan oleh <a href="https://lenysundariarnas.my.id">Lenny Sundari Arnas</a> · Tugas SKOM4332</span>
+        <span>PT Paragon Technology and Innovation · <a href="https://paragoncorp.com" target="_blank">paragoncorp.com</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================================================
+       JAVASCRIPT
+       ================================================ -->
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('main-navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 30) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('nav-burger-btn');
+      const isOpen = menu.classList.toggle('open');
+      btn.textContent = isOpen ? '✕' : '☰';
+    }
+
+    // Scroll animation observer
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    fadeEls.forEach(el => observer.observe(el));
+
+    // Smooth active nav highlight on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.navbar__links a');
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.style.color = '';
+            if (link.getAttribute('href') === '#' + entry.target.id) {
+              link.style.color = 'var(--pink-primary)';
+            }
+          });
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+
+    sections.forEach(s => sectionObserver.observe(s));
+
+    // Close mobile menu on resize
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        document.getElementById('mobile-menu').classList.remove('open');
+        document.getElementById('nav-burger-btn').textContent = '☰';
+      }
+    });
+  </script>
+</body>
+</html>

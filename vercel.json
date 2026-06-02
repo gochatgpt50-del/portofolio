@@ -1,7 +1,15 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/paragon/(.*)",
+      "destination": "/paragon/$1"
+    },
+    {
+      "source": "/paragon",
+      "destination": "/paragon/index.html"
+    },
+    {
+      "source": "/((?!paragon).)*",
       "destination": "/index.html"
     }
   ]
