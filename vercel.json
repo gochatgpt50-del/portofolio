@@ -7,21 +7,24 @@
           "value": "paragon.lenysundariarnas.my.id"
         }
       ],
-      "source": "/(.*)",
-      "destination": "/paragon/$1"
-    },
-    {
-      "source": "/paragon/(.*)",
-      "destination": "/paragon/$1"
-    },
-    {
-      "source": "/paragon",
+      "source": "/",
       "destination": "/paragon/index.html"
     },
     {
-      "source": "/((?!paragon).)*",
+      "has": [
+        {
+          "type": "host",
+          "value": "paragon.lenysundariarnas.my.id"
+        }
+      ],
+      "source": "/:path+",
+      "destination": "/paragon/:path+"
+    },
+    {
+      "source": "/((?!paragon).*)",
       "destination": "/index.html"
     }
   ]
 }
+
 
