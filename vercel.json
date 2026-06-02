@@ -1,30 +1,11 @@
 {
   "rewrites": [
     {
-      "has": [
-        {
-          "type": "host",
-          "value": "paragon.lenysundariarnas.my.id"
-        }
-      ],
-      "source": "/",
-      "destination": "/paragon/index.html"
-    },
-    {
-      "has": [
-        {
-          "type": "host",
-          "value": "paragon.lenysundariarnas.my.id"
-        }
-      ],
-      "source": "/:path+",
-      "destination": "/paragon/:path+"
-    },
-    {
-      "source": "/((?!paragon).*)",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ]
 }
+
 
 
