@@ -2,7 +2,7 @@ const profile = {
   name: 'Lenny Sundari Arnas',
   profileImage: '/profile.jpeg',
   cvUrl: '',
-  cvStatusText: 'CV ATS Menyusul',
+  cvStatusText: 'CV SAYA',
   educationStartYear: 2023,
 }
 
